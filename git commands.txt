@@ -1,0 +1,156 @@
+#Create a directory called git_exercise.
+mkdir git_exercise
+#cd to git_exercise.
+cd git_exercise 
+#Initialize a git repository at git_exercise
+git init
+#Create a file called one.py and add the following contents to the file: 
+touch one.py
+echo 'print("Hello, this is one.py!")' > one.py
+#Commit one.py with the message "Initial message"
+git add .
+git commit -m "Initial Message"
+#Add another file called two.py with the following contents
+touch two.py
+echo 'print("two")' > two.py
+#Execute git status. Understand each line printed by the command
+git status
+#Create a new branch called feature-2
+git checkout -b feature-2
+#Commit two.py in feature-2
+touch two.py
+git add . 
+git commit -m "commited"
+
+# Go to master branch
+git switch master
+
+#merge feature2 to master
+git merge feature-2
+
+# Create a branch named feature-3
+git branch feature3
+
+# Switch to feature3 branch
+git switch feature3
+
+# Create a file called three.py
+echo "print('three')" > three.py
+
+## Create a file called README.md
+echo "## Hello, world!\n\nTo run \feature-3\, execute \python3 three.py\" > README.md
+
+#commit three.py and Readme.md
+git add three.py Readme.md
+git commit -m "added three.py and Readme.md"
+
+## Switch to master branch
+git switch master
+
+# Create a branch  feature-4
+git branch feature-4
+
+# Switch to feature4 branch
+git switch feature4
+
+#create a file called four.py 
+echo "print('four')" > four.py
+
+# Create a file called README.md
+echo "## Hello, world!\n\nTo run \feature-4\, execute \python3 four.py\" > README.md
+
+# Commit four.py and README.md
+git add .
+git commit -m "Added four.py and README.md"
+
+# Switch to master branch
+git checkout master
+
+# Merge feature3 into master
+git merge feature3
+
+#check git status
+git status
+
+# commit the files 
+git add .
+git commit -m "commited"
+
+
+
+# Create a branch named feature-5
+git branch feature-5
+
+# Switch to feature-5 branch
+git switch feature-5
+
+# Create a file called five.py
+echo "print('five')" > five.py
+
+# Edit README.md
+echo -e "## Hello, world!\n\nTo run \feature-3\, execute \python3 three.py\\nTo run \feature-4\, execute \python3 four.py\\nTo run \feature-5\, execute \python3 five.py\" > README.md
+
+# Commit five.py and README.md
+git add five.py README.md
+git commit -m "Add five.py and edit README.md in feature-5"
+
+# Switch to master branch
+git switch master
+
+# Create a new branch named feature-6
+git branch feature-6
+
+# Switch to feature-6 branch
+git switch feature-6
+
+# Create a file called six.py
+echo "print('six')" > six.py
+
+# Create a file called README.md
+echo -e "## Hello, world!\n\nTo run \feature-3\, execute \python3 three.py\\nTo run \feature-4\, execute \python3 four.py\\nTo run \feature-6\, execute \python3 six.py\" > README.md
+
+# Commit six.py and README.md
+git add six.py README.md
+git commit -m "Add six.py and README.md in feature-6"
+
+# Switch to master branch
+git checkout master
+
+# Merge feature-5 into master
+git merge feature-5
+
+# Switch to feature-6 branch
+git checkout feature-6
+
+# Rebase feature-6 from master and resolve merge conflicts
+git rebase master
+
+# README.md must contain the specified content
+
+# Run git status
+git status
+
+# Commit the files that need to be committed
+git add README.md
+git commit -m "Fix merge conflicts in README.md"
+
+# Switch to master
+git checkout master
+
+# Merge feature-6 into master
+git merge feature-6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
